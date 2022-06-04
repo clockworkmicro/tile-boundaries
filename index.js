@@ -1,6 +1,6 @@
 function addTileBoundaries(map, opts)
 {
-	var url = "https://clockworkmicro-tile-demo.alpr.cc/?x={x}&y={y}&z={z}"
+	var url = "https://layer.clockworkmicro.com/v1/webtileboundaries?x={x}&y={y}&z={z}"
 	if (typeof opts == "undefined")
 		opts = {};
 
