@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tile boundaries</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+
+<!--include the helper script -->
+<script src="https://clockworkmicro.github.io/tile-boundaries.js"></script>
+</head>
+<body>
+<style>body{margin:0;}</style>
+<div id="map" style="width:100vw;height:100vh;"></div>
+<script>
+window.onload = function()
+{
+	var opts = {"zoomSnap":0.1, "zoomDelta": 0.1}
+	var map = L.map(document.getElementById("map"), opts).setView([ 10, 20 ], 2);
+	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+	// comment/uncomment below line for activating tile boundaries
+	addTileBoundaries(map);
+}
+</script>
+</body>
+</html>
